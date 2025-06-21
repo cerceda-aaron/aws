@@ -1,0 +1,3 @@
+# Amazon Web Services
+
+The goal of this repository is solely for learning AWS and its services. You do not need to follow a specific path; simply navigate to the directory of the service you wish to learn about and start by reading the README. Of course, this is not a replacement for the official documentation, which contains a wealth of valuable information. These are just my personal notes from articles I've read, YouTube videos, Udemy courses, and even notes from the official AWS documentation.
