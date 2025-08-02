@@ -79,7 +79,7 @@
 
 ![alt text](../images/ebs-ami.png)
 
-## EC2 Instacne Store
+## EC2 Instance Store
 
 - EBS volumes are network drives with good but "limited" performance.
 - If you need a high-performance hardware disk, use EC2 instance store
