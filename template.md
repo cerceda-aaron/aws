@@ -24,7 +24,7 @@
 ## Security Notes
 - [Example: Uses IAM roles, security groups, etc.]
 
-## Questiuon to Ask Yourself
+## Question to Ask Yourself
 
 - What problems does this service solves?
 - When would I use this over another AWS service?
