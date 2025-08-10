@@ -1,6 +1,6 @@
-locals {
-  instances_names = ["EC2-A", "EC2-B"]
-}
+# locals {
+#   instances_names = ["EC2-A", "EC2-B"]
+# }
 
 data "aws_vpc" "default-vpc" {
   default = true
@@ -52,26 +52,26 @@ resource "aws_vpc_security_group_egress_rule" "outbound-egress-ec2" {
   security_group_id = aws_security_group.sg-ec2.id
   cidr_ipv4 = "0.0.0.0/0"
   ip_protocol = "-1"
-  from_port = 0
-  to_port = 0
 }
 
-resource "aws_instance" "ec2-instance" {
-  for_each               = toset(local.instances_names)
-  ami                    = "ami-039675294319aca86"
-  instance_type          = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.sg-ec2.id]
-  associate_public_ip_address = true
+# THIS IS NOT USED SINCE ASG WILL DO IT FOR US
 
-  # user_data = templatefile("${path.module}/userdata.sh", {})
+# resource "aws_instance" "ec2-instance" {
+#   for_each               = toset(local.instances_names)
+#   ami                    = "ami-08ddf8e6269e0f32c"
+#   instance_type          = "t2.micro"
+#   vpc_security_group_ids = [aws_security_group.sg-ec2.id]
+#   associate_public_ip_address = true
 
-  root_block_device {
-    delete_on_termination = true
-    volume_size           = 10
-    volume_type           = "gp3"
-  }
+#   # user_data = templatefile("${path.module}/userdata.sh", {})
 
-  tags = {
-    Name = each.value
-  }
-}
+#   root_block_device {
+#     delete_on_termination = true
+#     volume_size           = 10
+#     volume_type           = "gp3"
+#   }
+
+#   tags = {
+#     Name = each.value
+#   }
+# }
