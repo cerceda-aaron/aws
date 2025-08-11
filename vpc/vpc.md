@@ -80,9 +80,4 @@
 
   * Use `aws_vpc`, `aws_subnet`, `aws_internet_gateway`, `aws_nat_gateway`, `aws_route_table`, and `aws_vpc_endpoint` resources.
 
----
-
-If you want, I can also create **one of these templates for every single VPC-related service individually** (like IGW, NAT Gateway, VPC Peering, VPN, etc.) so you have a ready-to-study AWS networking cheat sheet. That way, you’d have a whole set of AWS service cards.
-
-
 ![alt text](./images/architecture1.png)
