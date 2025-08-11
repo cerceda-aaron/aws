@@ -32,13 +32,7 @@
 * Monitoring and troubleshooting network traffic with Flow Logs.
 
 ## How it works (basic flow)
-
-1. Create a VPC with a CIDR block (IP address range).
-2. Partition it into subnets (public and private).
-3. Configure route tables, IGWs, and NATs to control internet access.
-4. Apply NACLs and Security Groups for traffic filtering.
-5. (Optional) Connect to AWS services via VPC Endpoints or other VPCs via Peering.
-6. (Optional) Connect on-premises to AWS via VPN or Direct Connect.
+....
 
 ## Security Notes
 
